@@ -1,0 +1,135 @@
+:root {
+    --x: 10px;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* CSS NAV */
+nav {
+    background-color: cadetblue;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.menu > li > a {
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+}
+
+ul.menu:first-child > li {
+    border-left: 1px solid white;
+}
+
+ul.menu > li > a:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+/* CSS HEADER */
+header {
+    background: linear-gradient(blue, darkblue);
+}
+
+h1.subject {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 3px 4px 2px whitesmoke;
+}
+
+/* CSS CONTENT */
+.course {
+    width: 70%;
+    margin: 0 auto;
+}
+
+h2.title {
+    background-color: darkblue;
+    padding: var(--x);
+    color: white;
+    margin-bottom: 0;
+    border-radius: var(--x) var(--x) 0 0;
+}
+
+.forum {
+    background-color: skyblue;
+    padding: var(--x);
+    border-bottom: 1px solid white;
+}
+
+.forum:last-child {
+    border-radius: 0 0 var(--x) var(--x);
+}
+
+.avatar {
+    width: 120px;
+    border-radius: 50%;
+}
+
+/* CSS ADS */
+.ads > div {
+    width: 14%;
+    background: linear-gradient(blue, darkblue);
+    color: white;
+    text-align: center;
+    padding: 10rem 0;
+    margin-top: var(--x);
+    border-radius: var(--x);
+    position: fixed;
+    z-index: -1;
+}
+
+.ads > div:first-child {
+    left: 0.5%;
+}
+
+.ads > div:last-child {
+    right: 0.5%;
+}
+
+footer {
+    background-color: #0a6fa3;
+    color: white;
+    margin-top: var(--x);
+}
+
+/* CSS subcontent */
+
+.sub {
+    position: relative;
+}
+
+.subcontent {
+    display: none;
+    background-color: aquamarine;
+    position: absolute;
+    right: 0;
+    width: 200px;
+}
+
+
+.subcontent::after {
+    content: " ";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent aquamarine transparent;
+    position: absolute;
+    bottom: 100%;
+    right: 6%;
+}
+
+.sub:hover .subcontent {
+    display: block;
+}
